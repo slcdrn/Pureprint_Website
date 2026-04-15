@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Form: Step 6 - PUREPRINT Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cumla_style.css"/>
+  <link rel="stylesheet" href="css/cumla_page4.css"/>
+</head>
+
+<body>
+  <header>
+    <a href="../../RODRIGUEZ III/home_page.html"><button class="bi bi-house btn btn-primary" id="HomeBtn"> Home</button></a>
+    <h1>PUREPRINT Website</h1>
+  </header>
+
+    <main>
+        <section style="text-align: center; padding: 8px;">
+            <div class="step6-text-container">
+                <h1>STEP 6: Upload File</h1>
+                <p>Attach the file you want us to print. Make sure it follows our 
+                    <span id="guidelinesLink" style="color:#d61278; text-decoration:underline; cursor:pointer;">guidelines</span> for the best output!
+                </p>
+            </div>
+        </section>   
+        
+    <div id="guidelinesModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
+      background:#fff; border:2px solid #0177b4; border-radius:10px; padding:20px; z-index:1000; max-width:300px; text-align:left;">
+      <h3>File Guidelines</h3>
+      <ul>
+        <li>Maximum file size: 10GB</li>
+        <li>Accepted formats: PDF, JPG, JPEG, PNG, TIFF, EPS, AI, PSD</li>
+        <li>Resolution: Minimum 300 DPI for images</li>
+        <li>Color mode: CMYK preferred for accurate print colors</li>
+        <li>File naming: Use clear names (e.g., “Poster_Final.ai”)</li>
+      </ul>
+      <button id="closeModal" style="margin-top:10px; padding:6px 12px; border:none; background:#0177b4; color:#fff; border-radius:5px; cursor:pointer;">Close</button>
+    </div>
+    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;"></div>
+  
+    <div class="upload-box" id="uploadBox">
+      <p id="uploadInstructions">Click here to upload your files.<br><span style="font-size:13px; color:#666;">PDF, JPG, PNG (multiple files supported)</span></p>
+      <input type="file" id="fileInput" multiple accept=".pdf,.jpg,.jpeg,.png, .tiff, .eps, .ai, .psd" style="display:none;"/>
+      <ul id="fileList"></ul>
+    </div>
+
+    <div class="btn-container">
+      <button id="backBtn">Back</button>
+      <button id="nextBtn">Next</button>
+    </div>  
+  </main>
+
+  <script>
+  // modal for guidelines 
+      const link = document.getElementById("guidelinesLink");
+      const modal = document.getElementById("guidelinesModal");
+      const overlay = document.getElementById("overlay");
+      const closeBtn = document.getElementById("closeModal");
+
+    link.onclick = () => {
+      modal.style.display = "block";
+      overlay.style.display = "block";};
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+      overlay.style.display = "none";};
+
+    overlay.onclick = () => { 
+      modal.style.display = "none";
+      overlay.style.display = "none";};
+  
+  // file upload
+    const uploadBox = document.getElementById('uploadBox');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+    const uploadInstructions = document.getElementById('uploadInstructions');
+
+    let uploadedFiles = JSON.parse(localStorage.getItem("uploadedFiles") || "[]");
+
+  // file list
+   function renderFileList() {
+    fileList.innerHTML = "";
+    if (uploadedFiles.length) {
+      uploadInstructions.style.display = "none";
+
+      uploadBox.style.justifyContent = "flex-start"; 
+      uploadBox.style.alignItems = "flex-start";
+
+      uploadedFiles.forEach((file, i) => {
+
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      span.textContent = file;
+      const btn = document.createElement("button");
+      btn.textContent = "❌";
+      btn.className = "remove-file-btn";
+      btn.onclick = e => { e.stopPropagation(); uploadedFiles.splice(i,1); localStorage.setItem("uploadedFiles",JSON.stringify(uploadedFiles)); renderFileList(); };
+      li.appendChild(span); li.appendChild(btn);
+      fileList.appendChild(li); });
+      fileList.style.display = "block";} 
+
+    else {
+      uploadInstructions.style.display = "block";
+      fileList.style.display = "none";
+
+      uploadBox.style.justifyContent = "center"; 
+      uploadBox.style.alignItems = "center"; } }
+
+    renderFileList();
+
+    uploadBox.addEventListener("click", ()=>fileInput.click());
+    
+    // file selection
+    fileInput.addEventListener("change", ()=> {
+      const newFiles = Array.from(fileInput.files).map(f=>f.name);
+      uploadedFiles = uploadedFiles.concat(newFiles);
+      localStorage.setItem("uploadedFiles", JSON.stringify(uploadedFiles));
+      renderFileList();
+    });
+
+    // back
+      document.getElementById('backBtn').onclick = () => {
+          window.history.back();
+        };
+
+    // next
+    document.getElementById("nextBtn").onclick = () => {
+      if(!uploadedFiles.length) return alert("Please upload at least one file before proceeding.");
+      window.location.href="order_step7.html";
+    };
+  </script>
+
+<footer class="page-footer"></footer>
+
+</body>
+</html>

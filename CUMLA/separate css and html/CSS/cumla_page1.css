@@ -1,0 +1,20 @@
+/* step 3 */
+    .service-btn 
+    {display: block; 
+      width: 100%;
+      background:#385080; 
+      color: #fff;
+      padding: 12px; 
+      border: none; 
+      border-radius: 50px;
+      margin-bottom: 12px; 
+      cursor: pointer; 
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 700;}
+
+    .service-btn:hover 
+    { background: #1e335e; }
+
+    .auth-right a:hover 
+    { text-decoration: underline; }

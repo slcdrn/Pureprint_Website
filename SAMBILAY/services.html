@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Services Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="icon" href="https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/280936660_3154894954784933_1300543895936697736_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEmptu6mZWnBZ8pKBFPUon7iePcEnJZUZeJ49wScllRl1I0ePzLKUrd7j7HdhnM3vSuMK-H4BW5mbb8zsn3m5LW&_nc_ohc=_z91qVQ7N4kQ7kNvwHEHtgn&_nc_oc=AdmJfhKaEoiZUkkkWqZlCj7ZvK7Po6VUUXMAqim_bkCWNo8FPZ9Y0e6sU9ceSKGKAPcsxjVFcF2tUJGhkJpvWtuS&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=XRltLuysCyT5RIAo9nUtRA&oh=00_AfjNPFO2zDQpDGxlJruIVE6s5605E-33I6BXVAInJZmIbw&oe=6930D83D"> 
+    
+        <style>
+            body{
+                margin: 0;
+            }
+
+            .header_container{
+                background: #0c1e42;
+                padding: 20px;
+                display: flex;
+                box-shadow: 0px 0px 20px 0px gray;
+                color: white;
+            }
+
+            .bi.bi-house.btn.btn-primary{ 
+                background-color:white;
+                border: none;
+                color: #0177b4;
+                font-family: 'Trebuchet MS';
+                letter-spacing: 2px;
+                border-radius: 100px;
+                padding: 10px;
+                margin: 10px;
+                font-size: 10px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .bi.bi-house.btn.btn-primary:hover{
+                background-color: #0177b4;
+                color: white;
+                transition: 0.5s;
+            }
+
+            .Title{
+                display: inline-block;
+                font-family: 'Trebuchet MS' ;
+                margin-left: 20px;
+                margin-top: 10px;
+                font-size: 28px;
+                letter-spacing: 2px;
+                color: white;
+            }
+
+            footer{
+                background-color: #0c1e42;
+                padding: 20px;
+                bottom:0;
+                width: 100%;
+                box-shadow: 0px -5px 20px 0px gray;
+            }
+
+            .promo-card{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .promo-card img{
+                display:flex;
+                justify-content: center;
+                margin-top: 20px;
+                box-shadow: 0px -5px 20px 0px gray;
+                width: 700px;
+            }
+
+            .main-text{
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Trebuchet MS';
+                color: #0c1e42;
+                margin-top: 20px;
+
+            }
+            .message{
+                text-align: center;
+            }
+
+            .message1{
+                font-size: 20px;
+            }
+
+            .button1{
+                border-radius: 50px;
+                padding: 5px 10px 5px  10px;
+                font-family: 'Trebuchet MS';
+                background-color: #0c1e42;
+                color: white;
+                border: none;
+                font-size: 20px;
+            }
+
+            .button1:hover{
+                transition: 0.5s;
+                background-color: #d61278;
+            }
+
+            .products-grid-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1px));
+                gap: 120px;
+                padding: 20px;
+                justify-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 100px;
+                gap:150px;
+            }
+
+            .service {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.485) ;
+                padding: 20px;
+            }
+
+            .service:hover{
+                transform: scale(1.1);
+                transition: 1s;
+                box-shadow: 2px 2px 10px 2px #d61278 ;
+            }
+
+            .service img {
+                width: 280px;
+                height: 280px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                
+
+            }
+
+            .service h2 {
+                margin-top: 12px;
+                font-size: 30px;
+                font-family: 'Trebuchet MS';
+                font-weight: bolder;
+                color: #0c1e42;
+
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <div class="header_container">
+            <a href="../index.html"><button class="bi bi-house btn btn-primary">Home</button></a>
+            <b class="Title">SERVICES</b>
+        </div>
+
+        <div class="promo-card">
+            <img src="https://i.imgur.com/3oEyNRT.png" />
+        </div>
+        <br>
+        <br>
+        <div class="main-text"> 
+            <p class="bi bi-printer-fill">  Our Services</p>
+        </div>
+
+        <div class="message">
+            <p class="message1">"For customized projects or services not listed, please call or chat us!"</p>
+            <a href="contact.html"> 
+                <button class="button1">Contact us</button>
+            </a>
+        </div>
+        <br> 
+        <div class="products-grid-container">
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/591812825_122270519558213989_2315276625497423194_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHnVXGqpUG0sfCroyWsQLr3cBF9iTrD7FRwEX2JOsPsVOROCI4UkRvLatVdZHoKGFmLvRjv4__4cqQVyIFq43Sr&_nc_ohc=-RGKQVJ-wtcQ7kNvwH9YiU6&_nc_oc=AdlweuB5B_ThZYJiq0Bcq8BfevWi2nvSU2nz-uVDgnqx4k8B-5C4Qnak18ZIzaMxu-o&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=9ltEVWZB4Hs5p0jnYBG5RA&oh=00_Aflh3SC-Eg5JTzX3i4wQrnTWKM7WEFRzdNOVOQCUVvYpeQ&oe=693892F9" height="300px" width="300px">
+                <h2>Tarpaulin</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/583360386_1246007967546895_6909384720995896759_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGMqZj4vB6nC8vYa118bAGSLTKIzq_4G5MtMojOr_gbk-yfC8b2dZSlPyGVpxn4CvsFRDLPXY2DkLu175Png6P7&_nc_ohc=z91wCPQig9IQ7kNvwFgOd9X&_nc_oc=AdnLaoKWgYoPYxiCTTFl__zk4vSTXpbQCOVIaomVbkHJAY-sJZaLKM3wCT0mQqQsH6w&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=G7xu6vP2puY-7XXStxQHAg&oh=00_Afn2ZS_Ls2HF7AxqVptPkNGRO022qhyU3lDofEzyXO4WoA&oe=6938AC4E" height="300px" width="300px">
+                <h2>Stickers</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/590695816_1253749343439424_8599508846255553684_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE0Zt9c6JjZWVEbv3a_5NS1E-0prN6YUtcT7Sms3phS1zOuqaOyzVPmUOcRDdY7wiexa9TYG3H60vjU77H4PUoO&_nc_ohc=mAeUyBy0Bs0Q7kNvwH9G8vG&_nc_oc=Adn1tfBuoriFkJgascvdwj-OqUFbkpJ3U2v2ZpNWYiZL7Ska9akmVRwfV5aECudvICI&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=GeHrIDeev3Xg-O3xCgWkIw&oh=00_AfnntHRBzFAs83vrAQHUJgqPsiibvFQskuaJHsa7wEbN9w&oe=6938B590" height="300px" width="300px">
+                <h2>Sintra Board</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwvEu7gR08gyC2lNOBlioBtDAKYiUD41he5Q&s" height="300px" width="300px">
+                <h2>Panaflex</h2>
+            </div>
+
+            <div class="service">
+                <img src= "https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/543050085_1182843623863330_220639079220939341_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHlyPqkhIsMgyU3ZBA-s8V2oZ-EgpSpXT-hn4SClKldP7qydbIsHWP0YkpYjWFq6elHxtJ9przDYi2gSj8lxaf7&_nc_ohc=pKnzzZZZVQEQ7kNvwHpwqCb&_nc_oc=Admi5Njsn9X9X96dg-dTYf6-KAvSMbBDdUaelFj6rvli5Kwx7X5cIPzhrMpbBxMEdfM&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=QsG8kKlsIC9pGXucXUVVFw&oh=00_Afldu86fPGd8pnhA4PrvYF07En8dRvUjfKFVF9FLTj_iGg&oe=6938BFAA" height="300px" width="300px">
+                <h2>Life Size Standee</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://brandpacks.com/wp-content/uploads/2016/06/free-print-shop-poster-template-1.jpg" height="300px" width="300px">
+                <h2>Posters</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/486400391_1055644669916560_3315030263029135602_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEgYuQn5VWkvVPiCrGUo0GCV3CPu8z-L25XcI-7zP4vbpYXlDnE76x2AlaS0bzoNQ8wDn_bOizRFZpQUNYT2uXV&_nc_ohc=4ffWau0etBIQ7kNvwHFQkgl&_nc_oc=Adm3mBNMRliT-1e9HI-bs63BqiaLgFL3ajiLLmXLxZwpChUBZsPkdqLmfc-KbQAYoMM&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=U2MAOzwLLb42QKjnIQseaw&oh=00_AfnT4q0wMyrEN9Lq9mtRYcfGl0SQ-UJefC_k2gyAvYv2hg&oe=6938B999" height="300px" width="300px">
+                <h2>Glass / Car Stickers</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/571978234_1227182599429432_3149608264677775129_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH6hfSF02FXmOhcyPuRCVf6Ij3l9RLL_jYiPeX1Esv-NgfPldQYsLyNz3w-8jahYkyGMJSfVse54rn33jAHf4za&_nc_ohc=it3SAtE86P0Q7kNvwF8wb-Z&_nc_oc=AdlFDNmHWKqq5AEN6Szg5Ure1cNaUZbFvDIINbNOzwTrRh8A3zrX2SblP9Ht2qp-3MA&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=90ZOFW5y0eLm1isfuxblPA&oh=00_AfnLBgYVwX22F5-cAL8ISr2hZWOMaVYwujy9lkGmp-5cJA&oe=69388B08" height="300px" width="300px">
+                <h2>Roll-Up Banner</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/577003451_1236819855132373_4379666778805023767_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHRZidbLGAp7gXt3Gk5_7ccA4f9_ZaZRpIDh_39lplGkqaCKHT0A2EHigenv0ax9MDSowxc37zxsjEw1q6IGpNR&_nc_ohc=e1Qe8sorFm4Q7kNvwG-nVs9&_nc_oc=AdnHRk9XbrnTxXMDSFMGBIxLUONp4uCXM3EYd8RdaQwYF50xcTuwh6-JRGd-968Lyv4&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=i38G8PNZCnZB-qaEWXODxg&oh=00_Afn1-D4iZ6dmYm0LIP2ebbG1a-sTvn7e4XPv5pvp5HTKxA&oe=69389001" height="300px" width="300px">
+                <h2>Tshirt Print</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8hTFZiDJYhOl1wNePyL197n0-6n2uifUanA&s" height="300px" width="300px">
+                <h2>Document Printing</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNnbZLEBk4H0Doi5v10TBjmotiEKrUfrzww&s" height="300px" width="300px">
+                <h2>Flyers</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/476369902_122214529394213989_1129052908696889688_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHnIkqsIAofw7Uhl_poexjv1oi22pBOSG3WiLbakE5IbfPNMx6G38TYiPCp_bN7XULPCf3WubAqHuER8eaLixAP&_nc_ohc=baXZhO9cytcQ7kNvwGhEiSZ&_nc_oc=Admd85x82GTKWVQJWMFt_yU4e8rkvrKml_czHp_HFHGKaPeGkPNtLNY2ns8X7A6dGC4&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=JI_yUvBlEjz5W930QuICPg&oh=00_Afn2Yp9p8mp6wnCMoJplWXUS4hXicgGi9fW1ya_qY9E3oQ&oe=6938BB3D" height="300px" width="300px">
+                <h2>Lamination</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/485722417_1050656883748672_4562275510755577880_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGAeBpQiGBt-pROETSPAxPvc7hBfvBATblzuEF-8EBNuTFJFRa7HyrYM_EZELDb_hVawJCRfELamds0BG4cdfzy&_nc_ohc=94ygCOjaj0cQ7kNvwFpEzQm&_nc_oc=AdlyDp7YNm89szdyFTTE8iULFw4WxVa4OOjC3kW1NMYCHoBb7MEfL3IFnUlHXKnJank&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=hKTCS1gbHUneX-Qp5SdaCg&oh=00_Afl4tUaQRSMjNvMlF7gaVOrJ-4Zuiwwe_Q6z3GODQ1PVXQ&oe=6938942E" height="300px" width="300px">
+                <h2>Photo Print</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://i.sstatic.net/qL7nO.jpg" height="300px" width="300px">
+                <h2>Xerox</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://d1sfn2gjohxaod.cloudfront.net/images/products_gallery_images/brochure1.jpg" height="300px" width="300px">
+                <h2>Brochures</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/513831042_1129015669246126_3179875534903885502_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFp0MMQkqe5OEoJCSf2i3sjNXMKcgoU3wQ1cwpyChTfBA9Awc7DuBQtmVyVBCpQ07WmskapW83NCqGNaO4VQ2XX&_nc_ohc=ShTSRijzo7AQ7kNvwEYc22S&_nc_oc=Admrsv1A4e8TafYj4IByWnSBMzl3b5wrP_AJLHN9gQlDwHpce4_2jNqR0v9Oc9SGcEs&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=Ve47rTHsuALi1D4WVtlJtg&oh=00_Afla-2YRjP2TuZ36tCHaMThqP2j6IMXWpcN93zFSkL5Fqg&oe=6938C201" height="300px" width="300px">
+                <h2>PVC ID's</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/571326039_1230755089072183_4836111624675333485_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEakhu5RbNGhucgOsP9nHcyFts0hoFWCqUW2zSGgVYKpdy44MTHIYjctHN6mLoz2WXnJK-pU8WW1ScBNpMGzrCP&_nc_ohc=WX6X3MRtqUMQ7kNvwGCq-Im&_nc_oc=AdmcTtpunhPIBGBSxtBpdvBSD38WGXJtvQ6mKbTw8dMP60-xBr3zoeAxx_dQw1a0ejo&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=6d07fVBpL93GOUNpQUqzeg&oh=00_AflaKH6efAw-qm4NRarAoPB9lmijl9HygGeDzDGGTC6cEw&oe=6938994D" height="300px" width="300px">
+                <h2>Business Card</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/518278074_1142276324586727_327357513161452719_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFjToT0N7MJlcK82OQagbYeytRN2CyqhULK1E3YLKqFQgtRPdEUGIUKsMeTa_9GGw_3H1rxrUoBjT65qep1tXbL&_nc_ohc=iefSGy2UOAoQ7kNvwFDKh5K&_nc_oc=AdltswNiwl1hiSzzkBLV2H9WMfL4Yuhr-HxkeRZ3SDnCFG1pRt609Fg7Ni6MArveNCk&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=xSzZ7UEb5M3j1VOTZrTX4A&oh=00_Afmrk8RNl1xPZbzu1DODHrvzcD8-3eRxtaj48zOZlgSxnw&oe=6938C424" height="300px" width="300px">
+                <h2>ID Lace / Lanyard</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/515278938_1132969505517409_5739005169565747449_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEy_zsvih_XDhFLhZDrtNu8tMJQeZoJpYi0wlB5mgmliPYoGTQhNjGVDhY38zM-S7rPcGnuWjNPNejYH0SDeEFi&_nc_ohc=ArEA1C6xoJsQ7kNvwHxm3Ql&_nc_oc=AdnV26NgWMDP0oUlCSn_p13HI3qmQs9f5FzYglFDGQaMm-4BS3BP-gtAp7So7dI3lB8&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=nx7TBDYqKUJwXQkSj_mgbw&oh=00_AfnNYQNjpyulMbZYUyq8ni2KwDv34l8JXGTL21QbEvkspQ&oe=6938945B" height="300px" width="300px">
+                <h2>Invitation</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/524372367_122249897768213989_7622662544388066190_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF9GJ_l5wyJLsUkDxYOzk33irckut4JM3mKtyS63gkzeev-s1laIOXiG4gwAjpNy_WChqe31GjB0FQk9L0VfdZp&_nc_ohc=oU7a7_QpmocQ7kNvwHnDJ2a&_nc_oc=AdkWNIUGCRlpRmPu30sBgTDaum43SreTwD-PnJ_JLotPztMKhCasgM8mfmladPFk2Qo&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=0D5ZaRhWZc1A0bVhxDatgA&oh=00_AflQjAeyDfbN9JWJW2pIIR2_LAofQmEyZZ0lJbdugHVC_g&oe=6938B9A8" height="300px" width="300px">
+                <h2>Loyalty Cards</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/591195918_1253752320105793_3199170465774218645_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHP0HFOfWUBmCSHVhNVpUKCmPVPDl_munKY9U8OX-a6cqo8MHIh4qqC1hsLFmSB2hi1vTQgQvgZbQjV4mDMU_qk&_nc_ohc=VygL7146sZ8Q7kNvwGilJHK&_nc_oc=AdnqpakUBWw2azPCNNp5Q-KzQFLBkd-cmg73uuT-gGrUIeqoeVmDvoRPfW_-neJAUEU&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=kk_T3ATpTGvm5D0Y0hJuXQ&oh=00_AfmS7l78Dd2aiLebdDepcKpprBv4TkJG4V-qt2HG_nX7ZQ&oe=6938A79A" height="300px" width="300px">
+                <h2>Ref Magnet</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://ideas.ted.com/wp-content/uploads/sites/3/2021/08/FINAL_Climate-Repair_credit_Stocksy.jpg" height="300px" width="300px">
+                <h2>Repair Services</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/557641660_1203592401788452_6041616905699469531_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHILDqW1jAAKXaQX4wJ6SvlFO9jtb3PjqMU72O1vc-Oo9uhO1OLooyM4QLkhjne_pQ28TY3VGkbxnm7OlPsLsjv&_nc_ohc=20nkVrrnP5cQ7kNvwFZgeOT&_nc_oc=AdnC5sYu9u1dxytR7GtREjKm1eC7Hq9z7BwPCzGEvc6BKR4SFEVNTGrxsXSABtPzdE8&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=htACjSMV5KUntGrJS3Zy3w&oh=00_AfloyahYuPn5LJT3NqVtxa0Sz3jkRvIwRAmdp9fK7ed_IA&oe=6938AD86" height="300px" width="300px">
+                <h2>Customize Mug</h2>
+            </div>
+
+            <div class="service">
+                <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t39.30808-6/532006084_1165736822240677_2422311851537893386_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHDjeOUezyYMTDGDbMJXMLY0qr2z33ckH7SqvbPfdyQfoawUgV7b61XQ_Q0wJfGVE58ALHyXnYweHJJEKHb7TqB&_nc_ohc=jk9VfvpYNFoQ7kNvwEBSkat&_nc_oc=AdmCpTezu-Udtc1g8H_Yuy0snBSYUDJ9aOiHc-RInPjaNK10XM91bwdgnvYOeeGzwa0&_nc_zt=23&_nc_ht=scontent.fmnl4-5.fna&_nc_gid=4n1tCLWd4I1ZmqiYwCRr6g&oh=00_Afl3cHz-mtfqdVm36AKmWUnm9-nqhNiUHwJujq6aoVmndg&oe=6938B9F2" height="300px" width="300px">
+                <h2>Dome Stickers</h2>
+            </div>
+        </div>
+        
+    </body>
+
+    <footer>
+
+    </footer>
+</html>

@@ -1,0 +1,62 @@
+/* thank you */
+        .thank-you-box 
+        {background: #ffffff;
+        width: 60%;
+        margin: 0 auto;
+        padding: 25px 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        text-align: left;
+        font-size: 18px;}
+
+        .confirmation-title 
+        {color: #385080; 
+        font-weight: 400; 
+        font-size: 32px; 
+        margin-bottom: 20px;
+        margin-top: 15px;
+        text-align: center;}
+
+        .status-label 
+        {display: inline-block;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+        font-size: 15px;}
+
+        .pending 
+        {background-color: #ffcccc;
+        color: #a30000;
+        border: 1px solid #ff9999;}
+
+        .btn-row 
+        {margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;}
+
+        .btn 
+        {padding: 12px 22px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-weight: bold;}
+
+        .home-btn 
+        {background: #0177b4;
+        color: white;}
+
+        .home-btn:hover 
+        {background: #005f91;}
+
+        .view-btn 
+        {background: white;
+        border: 2px solid #0177b4;
+        color: #0177b4;}
+
+        .view-btn:hover 
+        {background: #d7f1ff;}
+ 

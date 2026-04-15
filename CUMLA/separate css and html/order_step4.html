@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Form: Step 4 - PUREPRINT Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cumla_style.css"/>
+  <link rel="stylesheet" href="css/cumla_page2.css"/>
+</head>
+
+<body>
+  <header>
+    <a href="../../RODRIGUEZ III/home_page.html"><button class="bi bi-house btn btn-primary" id="HomeBtn"> Home</button></a>
+    <h1>PUREPRINT Website</h1>
+  </header>
+
+    <main id="main">
+    <section style="text-align: center; padding: 8px;">
+    <h1>STEP 4: Customize Options</h1>
+    <section class="step4-section">
+    <div class="step4-left">
+        <div class="step4-item">Size</div>
+        <div class="step4-item">Color</div>
+        <div class="step4-item">Quantity</div>
+        <div class="step4-item">Material/Finish</div>
+        <div class="step4-item">Other Add-ons</div>
+    </div>
+
+    <div class="step4-right">
+
+        <div class="step4-input" onclick="toggleDropdown('size')">
+          <span id="sizeText">Select size</span>
+          <div class="dropdown" id="sizeDropdown" style="display:none;">
+            <div onclick="selectOption('size', 'A4', event)">A4 - 8.3 x 11.7 in (21.0 x 29.7 cm)</div>
+            <div onclick="selectOption('size', 'Letter', event)">Letter - 8.5 x 11 in (21.6 x 27.9 cm)</div>
+            <div onclick="selectOption('size', 'Legal', event)">Legal - 8.5 x 14 in (21.6 x 35.6 cm)</div>
+            <div onclick="selectOption('size', 'Long', event)">Long - 8.5 x 13 in (21.6 x 33.0 cm)</div>
+            <div onclick="selectOption('size', 'A5', event)">A5 - 5.8 x 8.3 in (14.8 x 21.0 cm)</div>
+            <div onclick="selectOption('size', 'A3', event)">A3 - 11.7 x 16.5 in (29.7 x 42.0 cm)</div>
+            <div onclick="selectOption('size', 'A2', event)">A2 - 16.5 x 23.4 in (42.0 x 59.4 cm)</div>
+            <div onclick="selectOption('size', 'A1', event)">A1 - 23.4 x 33.1 in (59.4 x 84.1 cm)</div>
+            <div onclick="selectOption('size', 'B5', event)">B5 - 6.9 x 9.8 in (17.6 x 25.0 cm)</div>
+            <div onclick="selectOption('size', '2 x 3 ft - 24 x 36 in', event)">2 x 3 ft - 24 x 36 in</div>
+            <div onclick="selectOption('size', '3 x 5 ft - 36 x 60 in', event)">3 x 5 ft - 36 x 60 in</div>
+            <div onclick="selectOption('size', '4 x 6 ft - 48 x 72 in', event)">4 x 6 ft - 48 x 72 in</div>
+            <div onclick="selectOption('size', '5 x 8 ft - 60 x 96 in', event)">5 x 8 ft - 60 x 96 in</div>
+          </div>
+        </div>
+
+        <div class="step4-input" onclick="toggleDropdown('color')">
+          <span id="colorText">Select color</span>
+          <div class="dropdown" id="colorDropdown" style="display:none;">
+            <div onclick="selectOption('color', 'Colored', event)">Colored</div>
+            <div onclick="selectOption('color', 'Black & White', event)">Black & White</div>
+          </div>
+        </div>
+
+        <div class="step4-input" id="quantityInput">
+          <button onclick="changeQty(-1)">-</button>
+          <span id="qtyDisplay">1</span>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <div class="step4-input" onclick="toggleDropdown('material')">
+          <span id="materialText">Select material</span>
+          <div class="dropdown" id="materialDropdown" style="display:none;">
+            <div onclick="selectOption('material', 'Standard', event)">Standard Bond Paper</div>
+            <div onclick="selectOption('material', 'Glossy', event)">Glossy</div>
+            <div onclick="selectOption('material', 'Matte', event)">Matte</div>
+            <div onclick="selectOption('material', 'Vinyl', event)">Vinyl</div>
+          </div>
+        </div>
+
+        <div class="step4-input" onclick="toggleDropdown('addons')">
+          <span id="addonsText">Select add-on</span>
+          <div class="dropdown" id="addonsDropdown" style="display:none;">
+            <div onclick="selectOption('addons', 'Lamination', event)">Lamination</div>
+            <div onclick="selectOption('addons', 'Rush Service', event)">Rush Service</div>
+            <div onclick="selectOption('addons', 'Cutting', event)">Cutting</div>
+            <div onclick="selectOption('addons', 'None', event)">None</div>
+            <div onclick="selectOption('addons', 'Other', event)">Other</div>
+          </div>
+          
+          <input type="text" id="otherAddon" placeholder="Please specify" style="display:none;" onclick="event.stopPropagation();" />
+        </div>
+        
+    </div>
+    </section>
+    
+    <div class="btn-container">
+    <button id="backBtn">Back</button>
+    <button id="nextBtn">Next</button>
+    </div>  
+
+    </main>
+
+    <script>
+    // quantity
+    let qty = 1;
+    function changeQty(val) 
+      {qty += val;
+      if(qty < 1) qty = 1;
+      document.getElementById('qtyDisplay').textContent = qty;}
+
+    // dropdowns
+    function toggleDropdown(type) 
+      {const dropdown = document.getElementById(type + 'Dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';}
+
+    // select
+    function selectOption(type, value, event) 
+      {event.stopPropagation();
+      document.getElementById(type + 'Text').textContent = value;
+      document.getElementById(type + 'Dropdown').style.display = 'none';
+
+    if(type === 'addons' && value === 'Other') 
+    {document.getElementById('otherAddon').style.display = 'block';} 
+    else if(type === 'addons') 
+    {document.getElementById('otherAddon').style.display = 'none';}}
+
+    function capitalize(str) 
+    {return str.charAt(0).toUpperCase() + str.slice(1);}
+
+    // loads data from local storage
+    function loadSavedOptions() {
+        const savedQty = localStorage.getItem('orderQuantity');
+        if (savedQty) {
+            qty = parseInt(savedQty);
+            document.getElementById('qtyDisplay').textContent = qty;
+        }
+
+        const options = ['size', 'color', 'material', 'addons'];
+        options.forEach(type => {
+            const savedValue = localStorage.getItem('order' + capitalize(type));
+            if (savedValue && savedValue !== 'Select ' + type.replace('s', '')) {
+                document.getElementById(type + 'Text').textContent = savedValue;
+            }
+        });
+
+        const savedOtherAddon = localStorage.getItem('orderOtherAddon');
+        const addonsText = document.getElementById('addonsText').textContent;
+        const otherAddonInput = document.getElementById('otherAddon');
+
+        if (addonsText === 'Other' && savedOtherAddon) {
+            otherAddonInput.value = savedOtherAddon;
+            otherAddonInput.style.display = 'block';
+        } else {
+            otherAddonInput.style.display = 'none';
+              }
+          }
+
+    // back
+    document.getElementById('backBtn').onclick = () => {
+      window.history.back(); };
+
+    // next
+    document.getElementById('nextBtn').onclick = function() {
+    const size = document.getElementById('sizeText').textContent;
+    const color = document.getElementById('colorText').textContent;
+    const material = document.getElementById('materialText').textContent;
+    const addons = document.getElementById('addonsText').textContent;
+    const otherAddon = document.getElementById('otherAddon').value;
+
+    // validation
+    if (size === 'Select size') {
+      alert('Please select a size!');
+      return;
+    }
+    if (color === 'Select color') {
+      alert('Please select a color!');
+      return;
+      }
+    if (material === 'Select material') {
+      alert('Please select a material/finish!');
+      return;
+    }
+    if (addons === 'Select add-on') {
+      alert('Please select an add-on!');
+      return;
+    }
+    if (addons === 'Other' && otherAddon.trim() === '') {
+      alert('Please specify your Other add-on!');
+      return;
+    }
+
+  // save
+  localStorage.setItem('orderSize', size);
+  localStorage.setItem('orderColor', color);
+  localStorage.setItem('orderMaterial', material);
+  localStorage.setItem('orderQuantity', qty);
+  localStorage.setItem('orderAddons', addons);
+  localStorage.setItem('orderOtherAddon', otherAddon);
+
+  // next
+  window.location.href = "order_step5.html";
+  };
+
+    loadSavedOptions();
+
+    </script>
+
+  <footer class="page-footer"></footer>
+
+</body>
+</html>

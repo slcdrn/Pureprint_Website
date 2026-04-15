@@ -1,0 +1,114 @@
+<DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title>Error Message</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="icon" href="https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/280936660_3154894954784933_1300543895936697736_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEmptu6mZWnBZ8pKBFPUon7iePcEnJZUZeJ49wScllRl1I0ePzLKUrd7j7HdhnM3vSuMK-H4BW5mbb8zsn3m5LW&_nc_ohc=_z91qVQ7N4kQ7kNvwHEHtgn&_nc_oc=AdmJfhKaEoiZUkkkWqZlCj7ZvK7Po6VUUXMAqim_bkCWNo8FPZ9Y0e6sU9ceSKGKAPcsxjVFcF2tUJGhkJpvWtuS&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=XRltLuysCyT5RIAo9nUtRA&oh=00_AfjNPFO2zDQpDGxlJruIVE6s5605E-33I6BXVAInJZmIbw&oe=6930D83D"> 
+
+        <style>
+            body{
+                margin: 0;
+            }
+
+            .header_container{
+                background: #0c1e42;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                box-shadow: 0px 0px 20px 0px gray;
+                color: white;
+                
+            }
+
+            .bi.bi-house.btn.btn-primary{ 
+                background-color:white;
+                border: none;
+                color: #0177b4;
+                font-family: 'Trebuchet MS';
+                letter-spacing: 2px;
+                border-radius: 100px;
+                padding: 10px;
+                margin: 10px;
+                font-size: 10px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .bi.bi-house.btn.btn-primary:hover{
+                background-color: #0177b4;
+                color: white;
+                transition: 0.5s;
+            }
+
+            .Title{
+                display: inline-block;
+                font-family: 'Trebuchet MS' ;
+                margin-left: 20px;
+                margin-top: 10px;
+                font-size: 28px;
+                letter-spacing: 2px;
+                color: white;
+            }
+            .error_box{
+                background-color: #0c1e42;
+                font-family: 'Trebuchet MS';
+                text-align: center;
+                margin-top: 250px;
+                color: white;
+                font-weight: bold;
+                letter-spacing: 2px;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 20px;
+                box-shadow: 0px 0px 20px 0px gray;
+            }
+
+            .error_box:hover{
+                padding-left: 90px;
+                padding-right: 90px;
+                transition: 1s;
+                box-shadow: 0px 0px 20px 0px rgb(172, 2, 2);
+                transform: scale(1.1);
+            }
+
+            .error{
+                font-size: 30px;
+                color: red
+            }
+
+            footer{
+                background-color: #0c1e42;
+                padding: 20px;
+                bottom:0;
+                width: 100%;
+                position: fixed;
+                box-shadow: 0px -5px 20px 0px gray;
+
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
+        <div class="header_container">
+            <button class="bi bi-house btn btn-primary">Home</button>
+            <p class="Title">Error</p>
+        </div>
+    
+        <div class="error_box">
+            <p class="error">Error!</p>
+            <p>Our Repair Services are only available in our Tanza Branch. 
+                <br>
+                Please change your selected branch.
+            </p> 
+        </div>
+    </body>
+    <footer>
+        
+    </footer>
+</html>

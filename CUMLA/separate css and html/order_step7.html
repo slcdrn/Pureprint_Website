@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Form: Step 7 - PUREPRINT Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cumla_style.css"/>
+  <link rel="stylesheet" href="css/cumla_page5.css"/>
+</head>
+
+<body>
+  <header>
+    <a href="../../RODRIGUEZ III/home_page.html"><button class="bi bi-house btn btn-primary" id="HomeBtn"> Home</button></a>
+    <h1>PUREPRINT Website</h1>
+  </header>
+
+    <main>
+        <section style="text-align: center; padding: 8px;"> 
+            <h1>STEP 7: Submit Order</h1>
+        </section>
+
+    <div class="summary" id="orderSummary">
+    </div>
+
+    <div class="buttonsababa-container">
+      <button class="buttonsababa edit-buttonsababa " id="editbuttonsababa">Go back and Edit</button>
+      <button class="buttonsababa draft-buttonsababa" id="draftbuttonsababa">Save as Draft</button>
+      <button class="buttonsababa submit-buttonsababa" id="submitbuttonsababa">Submit Order</button>
+    </div>
+  </main>
+
+  <script>
+    // order data
+    const order = {
+      service: localStorage.getItem('orderService') || '-',
+      size: localStorage.getItem('orderSize') || '-',
+      color: localStorage.getItem('orderColor') || '-',
+      quantity: localStorage.getItem('orderQuantity') || '-',
+      material: localStorage.getItem('orderMaterial') || '-',
+      addons: localStorage.getItem('orderAddons') || '-',
+      otherAddon: localStorage.getItem('orderOtherAddon') || '',
+      schedule: localStorage.getItem('orderSchedule') || '-',
+      uploadedFiles: JSON.parse(localStorage.getItem('uploadedFiles') || '[]')
+    };
+
+    // summary
+    const summaryDiv = document.getElementById('orderSummary'); 
+    summaryDiv.innerHTML = `
+      <p><strong>Service:</strong> ${order.service}</p>
+      <p><strong>Size:</strong> ${order.size}</p>
+      <p><strong>Color:</strong> ${order.color}</p>
+      <p><strong>Quantity:</strong> ${order.quantity}</p>
+      <p><strong>Material/Finish:</strong> ${order.material}</p>
+      <p><strong>Add-ons:</strong> ${order.addons}${order.otherAddon ? ' (' + order.otherAddon + ')' : ''}</p>
+      <p><strong>Schedule/Branch:</strong> ${order.schedule}</p>
+      <p><strong>Uploaded Files:</strong> ${order.uploadedFiles.length ? order.uploadedFiles.join(', ') : '-'}</p>`;
+    
+    // buttons
+    document.getElementById('editbuttonsababa').onclick = () => {
+      // previous pages
+      window.location.href = 'order_step6.html';
+    };
+
+      // save as draft
+    document.getElementById('draftbuttonsababa').onclick = () => {
+      localStorage.setItem('draftOrder', JSON.stringify(order));
+      alert('Your order has been saved as draft!');
+    };
+
+    // submit 
+    document.getElementById('submitbuttonsababa').onclick = () => {
+      // Clear localStorage and go to thank you page
+      localStorage.clear(); 
+      window.location.href = 'order_thankyou.html';
+    };
+
+  </script>
+
+  <footer class="page-footer"></footer>
+
+</body>
+</html>

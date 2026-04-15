@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Form: Step 3 - PUREPRINT Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/cumla_style.css"/>
+  <link rel="stylesheet" href="css/cumla_page1.css"/>
+</head>
+
+<body>
+  <header>
+    <a href="../../RODRIGUEZ III/home_page.html"><button class="bi bi-house btn btn-primary" id="HomeBtn"> Home</button></a>
+    <h1>PUREPRINT Website</h1>
+  </header>
+
+    <main id="main">
+  <section style="text-align: center; padding: 8px;">
+    <h1>STEP 3: Choose our Service</h1>
+    <p>Select the type of printing service you need.</p>
+    <div style="display: flex; flex-direction: column; gap: 0px; max-width: 500px; margin: 0 auto;">
+      <button class="service-btn" onclick="selectService('Print and Marketing Materials')">Print and Marketing Materials</button>
+      <button class="service-btn" onclick="selectService('Personalized/Specialty Printing')">Personalized/Specialty Printing</button>
+      <button class="service-btn" onclick="selectService('Document Services')">Document Services</button>
+      <button class="service-btn" onclick="selectService('Repair Services')">Repair Services</button>
+    </div>
+    <br>
+  </section>
+    </main>
+
+    <script>
+    function selectService(service) 
+    {localStorage.setItem('orderService', service);
+    window.location.href = "order_step4.html";}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <footer class="page-footer"></footer>
+
+</body>
+</html>

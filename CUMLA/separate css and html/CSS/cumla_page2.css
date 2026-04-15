@@ -1,0 +1,93 @@
+      /* step 4 */
+      .step4-section 
+      {display: flex;
+      max-width: 800px;
+      margin: 0 auto;
+      gap: 10px;}
+
+      .step4-left, .step4-right 
+      {display: flex;
+      flex-direction: column;
+      gap: 10px;}
+
+      .step4-left
+      {width: 180px;}
+      
+      .step4-right
+      {flex-grow: 1;}
+
+      .step4-left .step4-item  
+      {background-color: #385080;
+      color: #fff;
+      height: 49px;
+      padding: 13px 10px;
+      font-weight: bold;
+      text-align: center;}
+
+      .step4-input 
+      {background-color: #fff;
+      border: 1px solid #ccc;
+      min-height: 49px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      padding-left: 0 10px;}
+
+      #quantityInput 
+      {justify-content: space-between;
+      padding: 0; }
+
+      #quantityInput button 
+      {background-color: #f0f0f0;
+      border: none;
+      color: #385080;
+      padding: 0 15px;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 1;
+      height: 100%;}
+
+      #qtyDisplay 
+      {flex-grow: 1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      height: 100%;   
+      font-size: 16px;}
+
+      .dropdown 
+      {display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #ccc;
+      z-index: 10;
+      max-height: 150px;
+      overflow-y: auto;}
+
+      .dropdown div 
+      {padding: 10px;
+      cursor: pointer;
+      white-space: nowrap;}
+
+      .dropdown div:hover 
+      {background-color: #f0f0f0;}
+
+      #otherAddon 
+      {display: none;
+      width: 70%;
+      height: 40%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fff;
+      padding: 5px 10px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin-left: 10px}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PurePrint — Sign Up</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0F4C8C;
+      --accent:#00A7E6;
+      --muted:#6b7280;
+      --card-bg:#fff;
+    }
+    *{box-sizing:border-box;font-family:"Montserrat",system-ui,Arial,Helvetica,sans-serif}
+    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#ffffff;}
+    .wrap{max-width:980px;width:100%;padding:32px;display:flex;gap:40px;align-items:center;justify-content:space-between}
+    
+    .brand{
+      flex:1;
+      display:flex;
+      gap:24px;
+      align-items:center;
+      padding-left:30px;
+    }
+    .brand img{width:240px;height:auto;object-fit:contain}
+
+    .card{
+      width:360px;
+      background:var(--card-bg);
+      border:3px solid #000;
+      border-radius:28px;
+      padding:28px;
+      box-shadow: 0 6px 20px rgba(15,40,90,0.06);
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+    }
+    .card h2{
+      text-align:center;
+      margin:0 0 14px 0;
+      font-size:24px;
+      color:var(--blue);
+      font-weight:700;
+    }
+
+    .field{margin-bottom:12px;display:flex;flex-direction:column;gap:6px}
+    label{font-size:12px;color:var(--muted);font-weight:600}
+    input[type="text"], input[type="email"], input[type="password"]{
+      height:34px;padding:6px 8px;border-radius:4px;border:1px solid #cfcfcf;font-size:13px;
+    }
+
+    .socials{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .btn-social{
+      height:36px;border-radius:18px;border:none;cursor:pointer;font-weight:700;
+      display:flex;align-items:center;gap:10px;justify-content:center;padding:0 12px;
+    }
+    .btn-google{background:#ffffff;border:1px solid #ddd}
+    .btn-fb{background:#1877F2;color:#fff}
+
+    .btn-submit{
+      margin-top:12px;height:30px;border-radius:14px;background:var(--accent);border:none;color:#fff;font-weight:700;cursor:pointer;
+    }
+
+    .small{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+    .footer-links{display:flex;justify-content:center;margin-top:10px;gap:8px;align-items: baseline; }
+    a { color:var(--blue); text-decoration:none; font-weight:600; font-size:13px }
+
+    .card .form-inner { padding:4px 6px }
+
+   
+    @media (max-width:900px){
+      .wrap{flex-direction:column;align-items:center;padding:18px}
+      .brand{order:2;padding-left:0;text-align:center}
+      .card{order:1}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand" aria-hidden="true">
+      </div><div>
+      <img src="logo.PNG" alt="PurePrint Logo">
+    </div>
+    <div class="card" role="region" aria-label="Sign Up">
+      <h2>Sign Up</h2>
+      <div class="form-inner">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" type="text" placeholder="Choose a username" autocomplete="username">
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter password" autocomplete="new-password">
+        </div>
+
+        <div class="field">
+          <label for="password2">Re-type Password</label>
+          <input id="password2" type="password" placeholder="Re-enter password" autocomplete="new-password">
+        </div>
+
+        <button class="btn-submit" id="signupBtn">Sign Up</button>
+
+        <div style="height:10px"></div>
+
+        <div class="small">or sign up with</div>
+        <div class="socials">
+          <button class="btn-social btn-google" id="googleBtn" title="Sign up with Google">
+            <span>G</span> Continue with Google
+          </button>
+          <button class="btn-social btn-fb" id="fbBtn" title="Sign up with Facebook">
+            <span style="font-weight:900">f</span> Continue with Facebook
+          </button>
+        </div>
+
+        <div class="footer-links">
+          <div class="small">Already have an account?</div>
+          <a href="Login_Fixed.html">Log In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+function loadAccounts(){
+  try {
+    return JSON.parse(localStorage.getItem('pp_accounts')||'[]');
+  } catch(e){ return []; }
+}
+
+function saveAccounts(list){
+  localStorage.setItem('pp_accounts', JSON.stringify(list));
+}
+
+function validateEmail(e){
+  return /\S+@\S+\.\S+/.test(e);
+}
+
+document.getElementById('signupBtn').addEventListener('click', function(){
+  const email = document.getElementById('email').value.trim();
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value;
+  const password2 = document.getElementById('password2').value;
+
+  if(!email || !username || !password || !password2){
+    return alert('Please fill out all fields.');
+  }
+  if(!validateEmail(email)){
+    return alert('Please enter a valid email address.');
+  }
+  if(password.length < 6){
+    return alert('Password must be at least 6 characters.');
+  }
+  if(password !== password2){
+    return alert('Passwords do not match.');
+  }
+
+  const accounts = loadAccounts();
+  if(accounts.some(a => a.username.toLowerCase() === username.toLowerCase())){
+    return alert('Username is already taken.');
+  }
+  if(accounts.some(a => a.email.toLowerCase() === email.toLowerCase())){
+    return alert('An account with this email already exists.');
+  }
+
+  accounts.push({ email, username, password, provider: 'email' });
+  saveAccounts(accounts);
+
+  alert('Account created successfully. Redirecting to login page.');
+  window.location.href = 'Login_Fixed.html';
+});
+
+
+function simulateSocialSignup(provider){
+  const email = prompt(`Enter the ${provider} email to link (example@gmail.com):`);
+  if(!email) return;
+
+  if(!validateEmail(email)){
+    return alert('Please enter a valid email.');
+  }
+
+  const accounts = loadAccounts();
+  
+  let base = email.split('@')[0].replace(/[^a-z0-9]/gi,'').slice(0,12) || provider+'user';
+  let username = base;
+  let i = 1;
+  while(accounts.some(a=>a.username.toLowerCase()===username.toLowerCase())){
+    username = base + i; i++;
+  }
+
+ 
+  accounts.push({ email, username, password: Math.random().toString(36).slice(2,10), provider });
+  saveAccounts(accounts);
+
+  alert(`${provider} account simulated and created. Redirecting to login page.`);
+  window.location.href = 'Login_Fixed.html';
+}
+
+document.getElementById('googleBtn').addEventListener('click', ()=> simulateSocialSignup('Google'));
+document.getElementById('fbBtn').addEventListener('click', ()=> simulateSocialSignup('Facebook'));
+</script>
+</body>
+</html>
+

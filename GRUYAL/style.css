@@ -1,0 +1,265 @@
+/*About style*/
+body {
+    margin: 0px;
+}
+image {
+    object-fit: contain;
+}
+.UL li {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    box-shadow: none;
+    text-shadow: none;
+    
+}
+
+
+.disc{
+    color: #0177B4;
+    
+}
+
+.Name{
+    font-size: 55px;
+    color:#0177B4;
+}
+
+
+nav{
+    box-shadow: none;
+}
+header {
+    font-family: Trebuchet MS;
+    text-align: center;
+    color: white; 
+    background-color: #0C1E42; 
+    font-style: bold;
+}
+table {
+    table-layout: fixed;
+    width: 96%;
+    height: 200px;
+    margin: 15px auto;
+    border-collapse: collapse;
+    font-size: 14pt;           
+}
+th, td {
+    padding: 10px;
+}
+th {
+    text-align: center; 
+    vertical-align: top;
+    color: white;
+}
+.header_container {
+    background: #0c1e42;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 20px 0px gray;
+    color: white;
+    margin-bottom: 30px;
+}
+footer {
+    background-color: #0C1E42; 
+    border: none;  
+    height: 60px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.bi.bi-house.btn.btn-primary {
+    background-color: white;
+    border: none;
+    color: #0177b4;
+    font-family: 'Trebuchet MS';
+    letter-spacing: 2px;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bi.bi.btn.btn-secondary {
+    background-color: #0177b4;
+    border: none;
+    color: white;
+    font-family: 'Trebuchet MS';
+    letter-spacing: 2px;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bi.bi-house.btn.btn-primary:hover {
+    background-color: #0177b4;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.bi.bi-house.btn.btn-secondary:hover {
+    background-color: #0c1e42;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+
+.Title {
+    display: inline-block;
+    font-family: 'Trebuchet MS';
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: white;
+    font-style: bold;
+
+}
+
+table.container {
+    
+    justify-content: center;
+    width: 60%;
+    height: 50px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #ffffff;
+}
+th.wide {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #0c1e42;
+    color: white;
+    border: none;
+    border-radius: none;
+    text-align: center;
+    vertical-align: top;
+    font-size: 18pt;
+}
+th.data {
+    color: black;
+}
+th.head {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #0c1e42;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18pt;
+    border-bottom: 50px;
+}
+
+table.textbox {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    color: black;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14pt;
+    height: 150px;
+}
+
+/* Home dropdown */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Trebuchet MS, sans-serif;
+}
+ul {
+    list-style: none;
+    background: #0C1E42;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+ul li {
+    display: inline-block;
+    position: relative;
+}
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-style: bold;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background: #0177B4;
+}
+ul li a:hover {
+    background: #014F7C;
+}
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+    size: 100px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    size: 50vh;
+
+}
+.form-group1 {
+    display: flex;
+    flex-direction: column;
+}
+.form-group2 {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    background: #1f3a71;
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 1px solid #bfc6d1;
+    width: 250px;
+}
+
+.notes-group input {
+    width: 300px;
+}
+
+.footer-note {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #6c7a89;
+    width: 20%;
+    margin-left: 150vh;
+}

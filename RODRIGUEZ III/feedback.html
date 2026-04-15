@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PurePrint - Feedback</title>
+    <link rel="stylesheet" href="CSS/rodrigueziii_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <header>
+        <div class="header_container">
+            <a href="home_page.html"><button class="bi bi-house btn btn-primary"> Home</button></a>
+            <p class="Title"><b> Feedback </b></p>
+        </div>
+    </header>
+    <div class="justify-center">
+        <div class="feedback-container">
+        <div class="average-rating-header">
+            <h2>Average Rating</h2>
+        <div class="rating-display" style="padding: 0px">
+            <table style="width: 75%">
+                <tr>
+                    <td>
+                        <span class="bi bi-star-fill" style="color: #0C1E42; font-size: 24px;"></span>
+                        <span class="bi bi-star-fill" style="color: #0C1E42; font-size: 24px;"></span>
+                        <span class="bi bi-star-fill" style="color: #0C1E42; font-size: 24px;"></span>
+                        <span class="bi bi-star-fill" style="color: #0C1E42; font-size: 24px;"></span>
+                        <span class="bi bi-star-half" style="color: #0C1E42; font-size: 24px;"></span>
+                        <span class="average-score">4.7</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            <hr class="header-separator">
+        <div class="controls-bar">
+            <div class="control-group">
+                <label for="sort-by" class="control-label">Sort by:</label>
+                <select id="sort-by" class="control-select">
+                    <option value="recent">Most Recent</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="highest-rating">Highest Rating</option>
+                </select>
+            </div>
+           
+            <div class="control-group">
+                <label for="filter-by" class="control-label">Filter by:</label>
+                <select id="filter-by" class="control-select">
+                    <option value="all">Branch/Services</option>
+                    <option value="branch1">Branch: Cavite</option>
+                    <option value="branch2">Branch: Noveleta</option>
+                    <option value="branch3">Branch: Tanza</option>
+                    <option value="service-a">Tarpaulin Printing</option>
+                    <option value="service-b">Sticker Printing</option>
+                    <option value="service-c">Photo Printing</option>
+                </select>
+            </div>
+        </div>
+        <hr class="header-separator">
+        <div class="review-list">
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="reviewer-info">
+                        <span class="reviewer-name">Anonymous</span>
+                        <span class="rating">
+                            ★★★★★
+                        </span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag branch">Branch 1</span>
+                        <span class="tag service">Type of Service</span>
+                    </div>
+                    <p class="feedback-text">Feedback</p>
+                </div>
+                <div class="placeholder-image">
+                    <svg viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#ccc" stroke-width="5"/><line x1="100" y1="0" x2="0" y2="100" stroke="#ccc" stroke-width="5"/></svg>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="reviewer-info">
+                        <span class="reviewer-name">Anonymous</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag branch">Branch 1</span>
+                        <span class="tag service">Type of Service</span>
+                    </div>
+                    <p class="feedback-text">Feedback</p>
+                </div>
+                <div class="placeholder-image">
+                    <svg viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#ccc" stroke-width="5"/><line x1="100" y1="0" x2="0" y2="100" stroke="#ccc" stroke-width="5"/></svg>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="reviewer-info">
+                        <span class="reviewer-name">Anonymous</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag branch">Branch 1</span>
+                        <span class="tag service">Type of Service</span>
+                    </div>
+                    <p class="feedback-text">Feedback</p>
+                </div>
+                <div class="placeholder-image">
+                    <svg viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#ccc" stroke-width="5"/><line x1="100" y1="0" x2="0" y2="100" stroke="#ccc" stroke-width="5"/></svg>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="reviewer-info">
+                        <span class="reviewer-name">Anonymous</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag branch">Branch 1</span>
+                        <span class="tag service">Type of Service</span>
+                    </div>
+                    <p class="feedback-text">Feedback</p>
+                </div>
+                <div class="placeholder-image">
+                    <svg viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#ccc" stroke-width="5"/><line x1="100" y1="0" x2="0" y2="100" stroke="#ccc" stroke-width="5"/></svg>
+                </div>
+            </div>
+        </div>
+        <div class="pagination-footer">
+            1 of ??? pages
+            <div class="arrow-placeholder">→</div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div><a href="../SAMBILAY/contact.html" style="color: white !important; text-decoration: none !important;">Social Media Accounts</a></div>
+    </footer>
+</body>
+</html>

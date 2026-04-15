@@ -1,0 +1,103 @@
+<!--Account Page-->
+<html>
+    <head>
+        <title> PurePrint - Account </title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link
+            rel="stylesheet"
+            href="CSS/rodrigueziii_style.css"
+        >
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
+    <header>
+        <div class="header_container">
+            <a href="home_page.html"><button class="bi bi-house btn btn-primary"> Home</button></a>
+            <p class="Title"><b> Account Settings </b></p>
+        </div>
+    </header>
+        <div class="heading">
+            <th><b>Profile Settings</b></th>
+        </div>
+
+        <div class="profile_table">
+            <table>
+                <tr><td>Username: Juan Dela Cruz</td></tr>
+                <tr><td>Email Address: juandelacruz@email.com</td></tr>
+                <tr><td>Phone Number: 0123-456-7890</td></tr>
+                <tr><td>Password: ***********</td></tr>
+            </table>    
+        </div>
+  
+        
+        <table class="container" style="width: 20%; margin-left: 15%"> 
+            <th class="head">My Orders</th>
+        </table>
+
+            <table class="order_table">
+                <th style="color: black">Pending</th>
+                <th style="color: black">For Approval</th>
+                <th style="color: black">Processing</th>
+                <th style="color: black">Completed</th>
+                <th style="color: black">Cancelled</th>
+            </table>
+
+        <table class="container" style="width: 20%; margin-left: 15%"> 
+            <th class="head">Transactions</th>
+        </table>
+    
+        <table class="transaction_table" style="height: 100px">
+            <tr><td><b>Transaction ID:</b></td></tr>
+            <tr><td><b>Receipt:</b></td></tr>
+        </table>
+
+
+
+    <table style="background-color: #f5f5f5; height: auto; width: 48%; margin-left: 30px; margin-top: 5px; border: 2px solid black;">
+        
+    </table>
+        <div class="heading">
+            <th><b>Notifications</b></th>
+        </div>
+    
+    <div style="width:48%; margin-left:15%; margin-top:10px;">
+        <div class="notification-row d-flex justify-content-between align-items-center" style="background:#fff; padding:10px 14px; margin-bottom:10px;">
+            <div class="flex-grow-1 text-start" style="font-weight:600;">Order Updates</div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)" id="orderUpdates" checked>
+                <label class="form-check-label visually-hidden" for="orderUpdates">Order Updates</label>
+            </div>
+        </div>
+
+        <div class="notification-row d-flex justify-content-between align-items-center" style="background:#fff; padding:10px 14px; ">
+            <div class="flex-grow-1 text-start" style="font-weight:600;">Promo Announcements</div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" style="box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)" id="promoAnnouncements" checked>
+                <label class="form-check-label visually-hidden" for="promoAnnouncements">Promo Announcements</label>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center" style="margin:20px 0; margin-bottom: 80px">
+        <button type="button" id="logoutBtn" class="btn" style="background-color:#D61278; border-color:#D61278; border-radius: 100px; color:#fff; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)">Log Out</button>
+    </div>
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Clear login session from both localStorage and sessionStorage
+            localStorage.removeItem('pp_loggedInUser');
+            sessionStorage.removeItem('pp_loggedInUser');
+            // Redirect to login page
+            window.location.href = '../De Luna/Login_Fixed.html';
+        });
+    </script>
+    <footer>
+        <div><a href="contact.html" style="color: white !important; text-decoration: none !important;">Social Media Accounts</a></div>
+    </footer>
+</body>
+</html>

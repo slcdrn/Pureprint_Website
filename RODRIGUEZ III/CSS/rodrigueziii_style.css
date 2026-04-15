@@ -1,0 +1,485 @@
+/*About style*/
+body {
+    margin: 0px;
+}
+image {
+    object-fit: contain;
+}
+header {
+    font-family: Trebuchet MS;
+    text-align: center;
+    color: white; 
+    background-color: #0C1E42; 
+    font-style: bold;
+}
+
+.header_container {
+    background: #0c1e42;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 20px 0px gray;
+    color: white;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #0C1E42; 
+    border: none;  
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px -5px 20px 0px gray;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    padding: 5px;
+}
+
+.bi.bi-house.btn.btn-primary {
+    background-color: white;
+    border: none;
+    color: #0177B4;
+    font-family: 'Trebuchet MS';
+    letter-spacing: 2px;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bi.bi-house.btn.btn-primary:hover {
+    background-color: #0177B4;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.Title {
+    display: inline-block;
+    font-family: 'Trebuchet MS';
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: white;
+    font-style: bold;
+}
+
+table {
+    table-layout: fixed;
+    width: 96%;
+    height: 200px;
+    margin: 15px auto;
+    border-collapse: collapse;
+    font-size: 14pt;           
+}
+td {
+    padding: 10px;
+}
+th {
+    padding: 10px;
+    text-align: center; 
+    vertical-align: top;
+    color: white;
+}
+
+.box_container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    font-style: bold;
+    column-gap: 30px;
+}
+.box_1 {
+    font-size: 18pt;
+    width: 35%;
+    height: 300px;
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #0C1E42;
+    color: white;
+}
+.box_2 {
+    font-size: 18pt;
+    width: 35%;
+    height: 300px;
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    color: white;
+}
+
+table.container {
+    
+    justify-content: center;
+    width: 60%;
+    height: 50px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #ffffff;
+}
+
+th.wide {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #0c1e42;
+    color: white;
+    border: none;
+    border-radius: none;
+    text-align: center;
+    vertical-align: top;
+    font-size: 18pt;
+}
+th.data {
+    color: black;
+}
+th.head {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #0c1e42;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18pt;
+    border-bottom: 50px;
+}
+
+table.textbox {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    color: black;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14pt;
+    height: 150px;
+}
+
+/* Home dropdown */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Trebuchet MS, sans-serif;
+}
+.no_bullets {
+  list-style-type: none; 
+  padding: 0;          
+  margin: 0;          
+}
+ul {
+    list-style: none;
+    background: #0C1E42;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+ul li {
+    display: inline-block;
+    position: relative;
+}
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-style: bold;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background: #0177B4;
+}
+ul li a:hover {
+    background: #014F7C;
+}
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* Account Settings */
+.heading {
+    font-family: 'Trebuchet MS';
+    font-size: 24px;
+    font-style: bold;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile_table {
+    margin-left: 13%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+.order_table {
+    color: black;
+    background-color: #f5f5f5;
+    width: 70%; 
+    margin-left: 15%; 
+    border: 2px solid black; 
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction_table {
+    color: black;
+    background-color: #f5f5f5;
+    width: 35%; 
+    margin-left: 15%;
+    border: 2px solid black; 
+    text-align: left;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-row { display:flex; align-items:center; gap:12px; }
+.notification-row .form-check { order:-1; margin-right:8px; }
+
+/* form button */
+
+.formbutton {
+    background-color:#0C1E42; 
+    color:#fff; 
+    width: 300px; 
+    height: 50px;
+    border-radius:100px; 
+    text-decoration:none; 
+    display:inline-block; 
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+
+
+
+/* feedback */
+.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-container {
+    width: 100%;
+    max-width: 800px;
+}
+/* --- Controls Bar Styling --- */
+
+.controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    padding: 10px 0;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+}
+
+.control-label {
+    color: #333;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Dropdown (Select) Styling */
+.control-select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1em;
+    font-family: 'Trebuchet MS';
+    cursor: pointer;
+   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23333" d="M6 9l-4-4h8l-4 4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 25px; 
+}
+
+
+/* --- Review Card Styling --- */
+
+.review-list {
+    display: grid;
+    gap: 15px;
+}
+
+.review-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 15px 20px;
+    border-radius: 8px;
+   
+    background-color: #0C1E42;
+    background-image: radial-gradient(#20385d 1px, transparent 1px);
+    background-size: 8px 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-content {
+    flex-grow: 1; 
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.reviewer-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.rating {
+    color: f5f5f5; 
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+.tags {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: #1e6091; 
+}
+
+.feedback-text {
+    margin: 0;
+    font-size: 1em;
+    color: #c7d2e4; 
+    text-align: left;
+}
+
+/* Placeholder for the Image/Icon on the right */
+.placeholder-image {
+    width: 60px;
+    height: 60px;
+    background-color: #0C1E42; 
+    border: 1px solid #1e6091;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    flex-shrink: 0; 
+}
+
+.placeholder-image svg {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+}
+
+/* --- Pagination Footer Styling --- */
+
+.pagination-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    font-size: 1em;
+    color: #555;
+}
+
+.arrow-placeholder {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0C1E42;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Average Rating Header Styling */
+
+.average-rating-header {
+    text-align: center;
+    padding: 0px 0;
+}
+
+.average-rating-header h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black; 
+    margin: 20px 0 -80px 0;
+}
+
+.rating-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -80px;
+}
+
+.main-stars {
+    color: 0C1E42;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.average-score {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #0C1E42;
+    margin-left: 20px;
+}
+
+.header-separator {
+    border: 0;
+    height: 2px;
+    background-color: #0C1E42;
+    margin: 15px 0 20px 0;
+}
+
+.controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 10px 0;
+}
+
+.controls-separator {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 5px 0 15px 0;
+}
